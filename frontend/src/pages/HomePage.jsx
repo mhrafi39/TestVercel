@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ThreeDot } from "react-loading-indicators";
-import "../styles/homepage.css";
+import "../styles/Homepage.css";
 import ServiceCard from "../components/ServiceCard";
 import { API_BASE } from "../api";
 
