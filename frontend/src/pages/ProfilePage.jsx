@@ -26,7 +26,7 @@ import {
   Settings,
   ChevronDown
 } from "lucide-react";
-import "../Styles/ProfilePage.css";
+import "../styles/ProfilePage.css";
 import defaultProfilePic from "../assets/defaultProfilePic.jpg";
 
 // Provider Application Form Component
