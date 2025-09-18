@@ -25,9 +25,6 @@ import DeleteServices from "./pages/DeleteServices";
 import DeleteMyServices from "./pages/DeleteMyServices";
 import NotificationsPage from "./components/NotificationPage";
 import Footer from "./components/Footer";
-
-
-import CategoryServicesPage from "./Pages/CategoryServicesPage";
 import ServiceBooked from "./pages/ServiceBooked";
 
 
@@ -87,8 +84,6 @@ function App() {
 
           <Route path="/delete-service" element={<DeleteServices/>} />
           <Route path="/delete-my-service" element={<DeleteMyServices/>} />
-
-          <Route path="/category/:category" element={<CategoryServicesPage />} />
 
           <Route path="/services-booked" element={<ServiceBooked />} />
 
