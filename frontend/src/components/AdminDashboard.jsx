@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ThreeDot } from "react-loading-indicators";
-import "../Styles/AdminDashboard.css";
+import "../styles/AdminDashboard.css";
 import { API_BASE } from "../api";
 
 const AdminDashboard = () => {
