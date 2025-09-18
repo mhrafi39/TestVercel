@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUser, FaEnvelope, FaShieldAlt } from "react-icons/fa";
 import { Settings, ChevronDown, Trash2 } from "lucide-react";
-import "../Styles/AdminProfile.css";
+import "../styles/AdminProfile.css";
 import { API_BASE } from "../api";
 
 const AdminProfile = () => {
