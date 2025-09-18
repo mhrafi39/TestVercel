@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ThreeDot } from "react-loading-indicators";
-import "../Styles/DeleteServices.css";
 import { API_BASE } from "../api";
 
 const ServiceSkeleton = () => (
