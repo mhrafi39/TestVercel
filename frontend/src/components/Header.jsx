@@ -111,9 +111,30 @@ const Header = () => {
 
   const handleLogout = () => {
     const logoutEndpoint = isLoggedInAsAdmin ? '/admin/logout' : '/logout';
-    axios.post(`${API_BASE}${logoutEndpoint}`, {}, {
+    
+    // 🚨 DEBUG: First test debug endpoint
+    console.log('Testing logout with token:', token);
+    
+    axios.post(`${API_BASE}/debug-logout`, {}, {
       headers: { Authorization: `Bearer ${token}` },
-    }).finally(() => {
+    }).then(response => {
+      console.log('Debug logout response:', response.data);
+      
+      // Now try actual logout
+      return axios.post(`${API_BASE}${logoutEndpoint}`, {}, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+    }).then(response => {
+      console.log('Actual logout response:', response.data);
+      localStorage.removeItem(isLoggedInAsAdmin ? 'admin_token' : 'token');
+      navigate(isLoggedInAsAdmin ? '/admin-login' : '/login');
+      window.location.reload();
+    }).catch(error => {
+      console.error('Logout error:', error);
+      console.error('Error response:', error.response?.data);
+      console.error('Error status:', error.response?.status);
+      
+      // Force logout even if backend fails
       localStorage.removeItem(isLoggedInAsAdmin ? 'admin_token' : 'token');
       navigate(isLoggedInAsAdmin ? '/admin-login' : '/login');
       window.location.reload();
