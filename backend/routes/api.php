@@ -23,6 +23,17 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Api\BookingsController;
 
 // ----------------------------
+// Test Route for Railway deployment
+// ----------------------------
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'Railway API is working!',
+        'timestamp' => now(),
+        'environment' => app()->environment()
+    ]);
+});
+
+// ----------------------------
 // Public Routes
 // ----------------------------
 
