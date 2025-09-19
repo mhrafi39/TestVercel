@@ -21,6 +21,8 @@ return [
 
     'allowed_origins' => [
         'https://test-vercel-qlttk68na-mehedi-hasan-rafis-projects.vercel.app',
+        'https://test-vercel-git-main-mehedi-hasan-rafis-projects.vercel.app',
+        'https://test-vercel-sage-kappa.vercel.app',
         'https://*.vercel.app',
         'http://localhost:3000',
         'http://localhost:5173',

@@ -29,6 +29,8 @@ class Cors
             'http://127.0.0.1:5173',
             'https://test-vercel-qlttk68na-mehedi-hasan-rafis-projects.vercel.app',
             'https://testvercel-qlttk68na-mehedi-hasan-rafis-projects.vercel.app',
+            'https://test-vercel-git-main-mehedi-hasan-rafis-projects.vercel.app',
+            'https://test-vercel-sage-kappa.vercel.app',
         ];
 
         $origin = $request->headers->get('Origin');
