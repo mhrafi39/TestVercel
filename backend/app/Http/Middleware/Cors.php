@@ -13,15 +13,35 @@ class Cors
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-        public function handle(Request $request, Closure $next): Response
-        {
+    public function handle(Request $request, Closure $next): Response
+    {
+        // Handle preflight OPTIONS request
+        if ($request->getMethod() === "OPTIONS") {
+            $response = response('', 200);
+        } else {
             $response = $next($request);
-
-            // Allow requests from React dev server
-            $response->headers->set('Access-Control-Allow-Origin', 'http://localhost:5173');
-            $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-            $response->headers->set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-            return $response;
         }
+
+        // Allow multiple origins
+        $allowedOrigins = [
+            'http://localhost:5173',
+            'http://localhost:3000',
+            'http://127.0.0.1:5173',
+            'https://test-vercel-qlttk68na-mehedi-hasan-rafis-projects.vercel.app',
+            'https://testvercel-qlttk68na-mehedi-hasan-rafis-projects.vercel.app',
+        ];
+
+        $origin = $request->headers->get('Origin');
+        
+        // Check if origin is in allowed list or matches vercel pattern
+        if (in_array($origin, $allowedOrigins) || preg_match('/https:\/\/.*\.vercel\.app$/', $origin)) {
+            $response->headers->set('Access-Control-Allow-Origin', $origin);
+        }
+
+        $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+        $response->headers->set('Access-Control-Allow-Credentials', 'true');
+
+        return $response;
+    }
 }
