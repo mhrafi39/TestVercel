@@ -46,6 +46,18 @@ Route::get('/routes', function () {
     return response()->json($routes);
 });
 
+// 🚨 DEBUG: Test logout without middleware
+Route::post('debug-logout', function(Request $request) {
+    $token = $request->bearerToken();
+    
+    return response()->json([
+        'success' => true,
+        'msg' => 'Debug logout endpoint reached',
+        'token_received' => $token ? 'Yes' : 'No',
+        'token_preview' => $token ? substr($token, 0, 20) . '...' : 'No token'
+    ]);
+});
+
 // ----------------------------
 // Public Routes
 // ----------------------------
