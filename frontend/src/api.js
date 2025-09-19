@@ -3,6 +3,11 @@ import axios from "axios";
 export const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api";
 export const STORAGE_BASE = import.meta.env.VITE_STORAGE_BASE_URL || "http://localhost:8000/storage";
 
+// Debug: Log the API base URL being used
+console.log("🚀 API_BASE URL:", API_BASE);
+console.log("🚀 Environment:", import.meta.env.MODE);
+console.log("🚀 VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
+
 export const getToken = () => {
   const userToken = localStorage.getItem("token");
   const adminToken = localStorage.getItem("admin_token");
