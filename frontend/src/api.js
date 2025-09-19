@@ -1,13 +1,7 @@
 import axios from "axios";
 
-// Use production URL by default, fallback to localhost for development
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://testvercel-production-7707.up.railway.app/api";
-export const STORAGE_BASE = import.meta.env.VITE_STORAGE_BASE_URL || "https://testvercel-production-7707.up.railway.app/storage";
-
-// Debug: Log the API base URL being used
-console.log("🚀 API_BASE URL:", API_BASE);
-console.log("🚀 Environment:", import.meta.env.MODE);
-console.log("🚀 VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
+export const API_BASE = "https://testvercel-production-7707.up.railway.app/api";
+export const STORAGE_BASE = "https://testvercel-production-7707.up.railway.app/storage";
 
 export const getToken = () => {
   const userToken = localStorage.getItem("token");
