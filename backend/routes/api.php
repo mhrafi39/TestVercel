@@ -33,6 +33,19 @@ Route::get('/test', function () {
     ]);
 });
 
+// Debug route to list all routes
+Route::get('/routes', function () {
+    $routes = collect(\Illuminate\Support\Facades\Route::getRoutes())->map(function ($route) {
+        return [
+            'method' => implode('|', $route->methods()),
+            'uri' => $route->uri(),
+            'name' => $route->getName(),
+            'action' => $route->getActionName(),
+        ];
+    });
+    return response()->json($routes);
+});
+
 // ----------------------------
 // Public Routes
 // ----------------------------
