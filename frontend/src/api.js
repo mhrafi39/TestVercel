@@ -1,7 +1,8 @@
 import axios from "axios";
 
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api";
-export const STORAGE_BASE = import.meta.env.VITE_STORAGE_BASE_URL || "http://localhost:8000/storage";
+// Use production URL by default, fallback to localhost for development
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://testvercel-production-7707.up.railway.app/api";
+export const STORAGE_BASE = import.meta.env.VITE_STORAGE_BASE_URL || "https://testvercel-production-7707.up.railway.app/storage";
 
 // Debug: Log the API base URL being used
 console.log("🚀 API_BASE URL:", API_BASE);
