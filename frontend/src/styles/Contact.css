@@ -213,7 +213,7 @@ html, body, #root {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .contact-container {
     padding: 1rem;
   }
@@ -221,95 +221,20 @@ html, body, #root {
   .contact-card {
     padding: 2rem 1.5rem;
     margin: 1rem;
-    max-width: 90vw;
   }
 
   .contact-title {
-    font-size: clamp(20px, 4vw, 28px);
-    margin-bottom: 8px;
+    font-size: 24px;
   }
 
   .contact-subtitle {
-    font-size: clamp(12px, 2.5vw, 14px);
-    margin-bottom: 20px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
-    padding: 0.7rem;
-  }
-
-  .contact-btn {
-    font-size: 16px;
-    padding: 0.7rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .contact-container {
-    padding: 0.75rem;
-  }
-
-  .contact-card {
-    padding: 1.75rem 1.25rem;
-    margin: 0.75rem;
-    max-width: 95vw;
-    border-radius: 16px;
-  }
-
-  .contact-title {
-    font-size: clamp(18px, 5vw, 24px);
-    margin-bottom: 6px;
-  }
-
-  .contact-subtitle {
-    font-size: clamp(11px, 3vw, 13px);
-    margin-bottom: 16px;
-  }
-
-  .contact-form input,
-  .contact-form textarea,
-  .contact-btn {
-    font-size: 16px;
-    padding: 0.65rem;
-    border-radius: 10px;
-  }
-  
-  .contact-form textarea {
-    min-height: 100px;
-  }
-  
-  .contact-message {
-    margin-top: 12px;
     font-size: 13px;
   }
-}
-
-/* Ultra small screens */
-@media (max-width: 360px) {
-  .contact-container {
-    padding: 0.5rem;
-  }
-
-  .contact-card {
-    padding: 1.5rem 1rem;
-    margin: 0.5rem;
-    max-width: 98vw;
-  }
-
-  .contact-title {
-    font-size: 20px;
-  }
-
-  .contact-subtitle {
-    font-size: 12px;
-  }
 
   .contact-form input,
   .contact-form textarea,
   .contact-btn {
-    padding: 0.6rem;
     font-size: 16px;
+    padding: 0.7rem;
   }
 }

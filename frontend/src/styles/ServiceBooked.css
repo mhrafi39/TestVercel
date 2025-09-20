@@ -335,223 +335,31 @@
   .service-actions-section {
     width: 100%;
     flex-direction: column;
-    gap: 0.75rem;
   }
   
   .service-action-btn {
     justify-content: center;
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    padding: 1rem;
   }
   
   .service-booked-container {
-    padding: 15px 12px;
+    padding: 20px 15px;
   }
   
   .service-title-section h1 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-  }
-  
-  .service-title-section p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   
   .bookings-section h2 {
-    font-size: clamp(1.1rem, 3vw, 1.25rem);
+    font-size: 1.25rem;
   }
   
   .table-wrapper {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 8px;
   }
   
   .service-table {
-    min-width: 700px;
-  }
-  
-  .service-table th,
-  .service-table td {
-    padding: 0.6rem 0.4rem;
-    font-size: 0.85rem;
-  }
-  
-  .service-table th {
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-  
-  .status-badge {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.5rem;
-  }
-  
-  .action-btn {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.75rem;
-  }
-  
-  .footer {
-    padding: 15px;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-booked-container {
-    padding: 12px 8px;
-  }
-  
-  .service-header {
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-  }
-  
-  .service-title-section h1 {
-    font-size: clamp(1.1rem, 5vw, 1.25rem);
-    margin: 0;
-  }
-  
-  .service-title-section p {
-    font-size: 0.85rem;
-    margin: 0.4rem 0 0 0;
-  }
-  
-  .service-action-btn {
-    padding: 0.7rem 0.9rem;
-    font-size: 0.85rem;
-  }
-  
-  .bookings-section {
-    margin-bottom: 1.5rem;
-  }
-  
-  .bookings-section h2 {
-    font-size: clamp(1rem, 4vw, 1.1rem);
-    margin-bottom: 1rem;
-  }
-  
-  .table-wrapper {
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-table {
-    min-width: 650px;
-  }
-  
-  .service-table th,
-  .service-table td {
-    padding: 0.5rem 0.3rem;
-    font-size: 0.8rem;
-  }
-  
-  .service-table th {
-    font-size: 0.75rem;
-    padding: 0.6rem 0.3rem;
-  }
-  
-  .status-badge {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-  }
-  
-  .action-btn {
-    padding: 0.35rem 0.5rem;
-    font-size: 0.7rem;
-    white-space: nowrap;
-  }
-  
-  .footer {
-    padding: 12px;
-    font-size: 0.8rem;
-  }
-  
-  /* Make table more mobile-friendly */
-  .service-table td:first-child,
-  .service-table th:first-child {
-    position: sticky;
-    left: 0;
-    background: white;
-    z-index: 1;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  }
-  
-  .service-table th:first-child {
-    background: #f8f9fa;
-  }
-}
-
-/* Ultra small screens - alternative table layout */
-@media (max-width: 360px) {
-  .service-booked-container {
-    padding: 8px 6px;
-  }
-  
-  .service-title-section h1 {
-    font-size: 1.1rem;
-  }
-  
-  .service-action-btn {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.8rem;
-  }
-  
-  .bookings-section h2 {
-    font-size: 1rem;
-  }
-  
-  /* Convert table to card layout on very small screens */
-  .service-table {
-    min-width: auto;
-    display: block;
-  }
-  
-  .service-table thead {
-    display: none;
-  }
-  
-  .service-table tbody {
-    display: block;
-  }
-  
-  .service-table tr {
-    display: block;
-    background: white;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    margin-bottom: 0.75rem;
-    padding: 0.75rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-table td {
-    display: block;
-    padding: 0.25rem 0;
-    border: none;
-    text-align: left;
-    font-size: 0.85rem;
-  }
-  
-  .service-table td:before {
-    content: attr(data-label) ": ";
-    font-weight: 600;
-    color: #495057;
-    display: inline-block;
-    width: 100px;
-  }
-  
-  .service-table td:first-child {
-    position: static;
-    background: transparent;
-    box-shadow: none;
-  }
-  
-  .footer {
-    padding: 10px;
-    font-size: 0.75rem;
+    min-width: 800px;
   }
 }
 

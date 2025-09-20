@@ -477,153 +477,22 @@ body:has(.login-section) {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .login-card {
     padding: 2rem 1.5rem;
     margin: 1rem;
-    max-width: 90vw;
   }
   
   .login-logo {
-    width: 100px;
+    width: 120px;
     margin-bottom: 1.5rem;
   }
   
   .input {
     padding: 0.7rem 0.9rem;
-    font-size: 16px; /* Prevents zoom on iOS */
   }
   
   .button {
     padding: 0.7rem;
-    font-size: 16px;
-  }
-  
-  .role-options {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .role-option {
-    gap: 0.4rem;
-  }
-  
-  .role-text {
-    font-size: 0.9rem;
-  }
-  
-  .google-btn {
-    padding: 0.7rem;
-    font-size: 0.9rem;
-  }
-  
-  .register-btn {
-    padding: 0.55rem 1.25rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .login-section {
-    padding: 1rem;
-  }
-  
-  .login-card {
-    padding: 1.75rem 1.25rem;
-    margin: 0.75rem;
-    max-width: 95vw;
-    border-radius: 16px;
-  }
-  
-  .login-logo {
-    width: 90px;
-    margin-bottom: 1.25rem;
-  }
-  
-  .input {
-    padding: 0.65rem 0.8rem;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-  
-  .button {
-    padding: 0.65rem;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-  
-  .role-options {
-    gap: 0.75rem;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .role-option {
-    gap: 0.35rem;
-  }
-  
-  .role-text {
-    font-size: 0.85rem;
-  }
-  
-  .google-btn {
-    padding: 0.65rem;
-    font-size: 0.85rem;
-  }
-  
-  .register-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    margin-top: 1rem;
-  }
-  
-  .label {
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  .error-text {
-    font-size: 0.85rem;
-    margin-bottom: 0.6rem;
-  }
-  
-  .divider {
-    margin: 1.25rem 0;
-    font-size: 0.8rem;
-  }
-}
-
-/* Ultra small screens */
-@media (max-width: 360px) {
-  .login-card {
-    padding: 1.5rem 1rem;
-    margin: 0.5rem;
-    max-width: 98vw;
-  }
-  
-  .login-logo {
-    width: 80px;
-    margin-bottom: 1rem;
-  }
-  
-  .input,
-  .button,
-  .google-btn {
-    padding: 0.6rem 0.75rem;
-    font-size: 16px;
-  }
-  
-  .register-btn {
-    padding: 0.45rem 0.9rem;
-    font-size: 0.8rem;
-  }
-  
-  .role-text {
-    font-size: 0.8rem;
-  }
-  
-  .label {
-    font-size: 0.85rem;
   }
 }
