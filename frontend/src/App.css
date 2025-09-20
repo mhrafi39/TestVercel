@@ -27,7 +27,7 @@ body {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  padding: 0.8rem 2rem !important;
+  padding: 0.6rem 1.5rem !important;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   backdrop-filter: blur(20px);
   box-shadow: 
@@ -585,7 +585,7 @@ body {
 /* Add body margin for fixed header */
 body {
   margin: 0 !important;
-  padding-top: 80px !important;
+  padding-top: 70px !important; /* Reduced for better mobile */
   padding-bottom: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -596,7 +596,7 @@ main {
   margin: 0 !important;
   padding-top: 0 !important;
   width: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 70px); /* Adjusted for new header height */
 }
 
 /* Universal page wrapper to prevent header overlap */
@@ -633,18 +633,27 @@ section:not(.login-section):not(.register-page),
   padding-top: 1rem !important;
 }
 
-/* Responsive design */
+/* Responsive design improvements */
 @media (max-width: 768px) {
+  body {
+    padding-top: 60px !important; /* Smaller header on mobile */
+  }
+  
+  main {
+    min-height: calc(100vh - 60px);
+  }
+  
   .header-center {
     display: none;
   }
   
   .app-header {
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem !important;
+    height: 60px !important;
   }
   
   .main-nav {
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .header-right {
@@ -653,12 +662,50 @@ section:not(.login-section):not(.register-page),
   
   .profile-dropdown {
     right: -10px;
-    min-width: 220px;
+    min-width: 200px;
   }
   
   .notif-dropdown {
     right: -10px;
-    width: 280px;
+    width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 55px !important;
+  }
+  
+  main {
+    min-height: calc(100vh - 55px);
+  }
+  
+  .app-header {
+    padding: 0.4rem 0.75rem !important;
+    height: 55px !important;
+  }
+  
+  .logo-img {
+    height: 35px;
+  }
+  
+  .profile-circle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .notif-btn {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+  }
+  
+  .profile-dropdown,
+  .notif-dropdown {
+    right: 0;
+    left: auto;
+    min-width: calc(100vw - 20px);
+    max-width: 300px;
   }
 }
 

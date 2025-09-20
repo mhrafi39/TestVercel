@@ -186,3 +186,237 @@
   text-align: center;
   color: #888;
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+  
+  .cta-box {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-box h2 {
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    margin-bottom: 8px;
+  }
+  
+  .cta-apps {
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .app-badge {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .brand {
+    text-align: center;
+    grid-column: 1 / -1;
+  }
+  
+  .brand-name {
+    font-size: 1.3rem;
+  }
+  
+  .brand-desc {
+    font-size: 0.85rem;
+    margin: 8px 0;
+  }
+  
+  .contact-list {
+    font-size: 0.8rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .trust-badges {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .trust-badges span {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+  .link-col {
+    text-align: center;
+  }
+  
+  .link-col h3 {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+  
+  .link-col a {
+    font-size: 0.8rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding-top: 12px;
+  }
+  
+  .socials {
+    order: -1;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    padding: 8px;
+  }
+  
+  .bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+  
+  .copyright {
+    font-size: 0.7rem;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 10px;
+  }
+  
+  .cta-box {
+    padding: 12px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+  }
+  
+  .cta-box h2 {
+    font-size: clamp(1.1rem, 5vw, 1.2rem);
+    margin-bottom: 6px;
+  }
+  
+  .cta-apps {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  
+  .app-badge {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  
+  .brand-desc {
+    font-size: 0.8rem;
+    margin: 6px 0;
+  }
+  
+  .contact-list {
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+  
+  .trust-badges span {
+    font-size: 0.65rem;
+    padding: 2px 5px;
+  }
+  
+  .link-col h3 {
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+  }
+  
+  .link-col a {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .footer-bottom {
+    gap: 10px;
+    padding-top: 10px;
+  }
+  
+  .social-icon {
+    padding: 6px;
+  }
+  
+  .bottom-links {
+    font-size: 0.7rem;
+    gap: 6px;
+  }
+  
+  .copyright {
+    font-size: 0.65rem;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 20px 8px;
+  }
+  
+  .cta-box {
+    padding: 10px;
+  }
+  
+  .cta-box h2 {
+    font-size: 1.1rem;
+  }
+  
+  .app-badge {
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
+  
+  .brand-name {
+    font-size: 1.1rem;
+  }
+  
+  .brand-desc {
+    font-size: 0.75rem;
+  }
+  
+  .contact-list {
+    font-size: 0.7rem;
+  }
+  
+  .trust-badges span {
+    font-size: 0.6rem;
+    padding: 2px 4px;
+  }
+  
+  .link-col a {
+    font-size: 0.7rem;
+  }
+  
+  .bottom-links {
+    font-size: 0.65rem;
+  }
+}
