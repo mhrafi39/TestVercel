@@ -23,42 +23,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Api\BookingsController;
 
 // ----------------------------
-// Test Route for Railway deployment
-// ----------------------------
-Route::get('/test', function () {
-    return response()->json([
-        'message' => 'Railway API is working!',
-        'timestamp' => now(),
-        'environment' => app()->environment()
-    ]);
-});
-
-// Debug route to list all routes
-Route::get('/routes', function () {
-    $routes = collect(\Illuminate\Support\Facades\Route::getRoutes())->map(function ($route) {
-        return [
-            'method' => implode('|', $route->methods()),
-            'uri' => $route->uri(),
-            'name' => $route->getName(),
-            'action' => $route->getActionName(),
-        ];
-    });
-    return response()->json($routes);
-});
-
-// 🚨 DEBUG: Test logout without middleware
-Route::post('debug-logout', function(Request $request) {
-    $token = $request->bearerToken();
-    
-    return response()->json([
-        'success' => true,
-        'msg' => 'Debug logout endpoint reached',
-        'token_received' => $token ? 'Yes' : 'No',
-        'token_preview' => $token ? substr($token, 0, 20) . '...' : 'No token'
-    ]);
-});
-
-// ----------------------------
 // Public Routes
 // ----------------------------
 
